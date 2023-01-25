@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ikticlh/pohangdj/static/css/main.af7b0d0e.css",
+    "main.js": "/ikticlh/pohangdj/static/js/main.ffa09f1e.js",
+    "index.html": "/ikticlh/pohangdj/index.html",
+    "main.af7b0d0e.css.map": "/ikticlh/pohangdj/static/css/main.af7b0d0e.css.map",
+    "main.ffa09f1e.js.map": "/ikticlh/pohangdj/static/js/main.ffa09f1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af7b0d0e.css",
+    "static/js/main.ffa09f1e.js"
+  ]
+}
