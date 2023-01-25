@@ -15,9 +15,9 @@ const Home = ( {userObj} ) => {
                 })
             }, [])
     return (
-        <div>
+        <div className="container">
             <NPDJWFactory userObj={userObj} />
-            <div>
+            <div style={{ marginTop: 30 }}>
                 {PDJWs.map((PDJW) => (
                     <NPDJW 
                     key={PDJW.id} 

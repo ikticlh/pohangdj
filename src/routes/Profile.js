@@ -25,23 +25,30 @@ export default ( {refreshUser, userObj } ) => {
             refreshUser();
 
         }
-        console.log(userObj.displayName)
     }
-
-    
     return (
-        <>
-        <form onSubmit={onSubmit}>
+        <div className="container">
+        <form onSubmit={onSubmit} className="profileForm">
             <input 
             onChange={onChange}
-            type="text" 
+            type="text"
+            autoFocus 
             placeholder="사용할 이름을 입력하세요"
             value={newDisplayName}
-
-            />
-            <input type="submit" value="프로필 수정하기" />
-        </form>
-        <button onClick={onLogOutClick}>로그아웃</button>
-    </>
+            className="formInput"
+        />
+        <input
+          type="submit"
+          value="Update Profile"
+          className="formBtn"
+          style={{
+            marginTop: 10,
+          }}
+          />
+          </form>
+          <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
+        Log Out
+      </span>
+    </div>
     )
 }
