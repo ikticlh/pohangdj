@@ -59,15 +59,15 @@ form {
   width: 100%;
   padding: 7px 20px;
   text-align: center;
-  color: white;
+  color: black;
   border-radius: 20px;
-  background-color: #04aaff;
+  background-color: #EDEDED;
   cursor: pointer;
 }
 
 .cancelBtn {
   cursor: pointer;
-  background-color: tomato;
+  background-color: #EDEDED;
 }
 
 /* Profile Page */
@@ -108,7 +108,7 @@ form {
   height: 40px;
   padding: 0px 20px;
   color: white;
-  border: 1px solid #04aaff;
+  border: 1px solid #EDEDED;
   border-radius: 20px;
   font-weight: 500;
   font-size: 12px;
@@ -117,17 +117,17 @@ form {
 .factoryInput__arrow {
   position: absolute;
   right: 0;
-  background-color: #04aaff;
+  background-color: #EDEDED;
   height: 40px;
   width: 40px;
   padding: 10px 0px;
   text-align: center;
   border-radius: 20px;
-  color: white;
+  color: #000000;
 }
 
 .factoryInput__label {
-  color: #04aaff;
+  color: #EDEDED;
   cursor: pointer;
 }
 
@@ -252,8 +252,8 @@ form {
 
 .authSubmit {
   text-align: center;
-  background: #04aaff;
-  color: white;
+  background: #EDEDED;
+  color: black;
   margin-top: 10px;
   cursor: pointer;
 }
@@ -273,4 +273,18 @@ form {
   display: block;
   font-size: 12px;
   text-decoration: underline;
+}
+.like {
+  margin-left: 4.5px;
+  margin-right: 0px;
+}
+.edit {
+  margin-left: 8px;
+}
+.mmmm {
+  margin-top: 40px;
+}
+.abclike {
+  margin-top: 40px;
+  margin-left: 0px;
 }

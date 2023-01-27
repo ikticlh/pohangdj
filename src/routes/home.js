@@ -5,15 +5,18 @@ import React, { useState, useEffect } from "react";
 
 const Home = ( {userObj} ) => {
     const [PDJWs, setPDJWs] = useState([]);
-    useEffect(() =>{
-        dbService.collection("PDJWs").onSnapshot((snapshot)=>{
-            const PDJWArray= snapshot.docs.map(doc =>
-                ({id:doc.id, 
-                  ...doc.data()
-                }))
-                setPDJWs(PDJWArray);         
-                })
-            }, [])
+    useEffect(() => {
+        dbService.collection("PDJWs").orderBy("createdAt", "desc").onSnapshot(
+          (snapshot) => {
+            const PDJWArray = snapshot.docs.map((doc) => ({
+              id: doc.id,
+              ...doc.data(),
+            }));
+            setPDJWs(PDJWArray);
+          }
+        );
+      }, []);
+      
     return (
         <div className="container">
             <NPDJWFactory userObj={userObj} />
@@ -21,8 +24,9 @@ const Home = ( {userObj} ) => {
                 {PDJWs.map((PDJW) => (
                     <NPDJW 
                     key={PDJW.id} 
-                    PDJWObj={PDJW} 
-                    isOwner={PDJW.creatorId === userObj.uid}/>
+                    PDJWObj={PDJW}
+                    isOwner={PDJW.creatorId === userObj.uid}
+                    />
                 ))}
             </div>
         </div>

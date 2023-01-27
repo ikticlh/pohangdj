@@ -1,7 +1,5 @@
 import React, {useState} from "react"
 import { dbService } from "fbase";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const NPDJWFactory = ({ userObj }) => {
     const [PDJW, setPDJW] = useState("")
