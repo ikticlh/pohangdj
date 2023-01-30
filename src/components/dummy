@@ -1,0 +1,3 @@
+            {PDJWObj.comments && PDJWObj.comments.map((comment, index) => (
+                <div key={index}>{comment}</div>
+            ))}

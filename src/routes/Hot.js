@@ -4,10 +4,15 @@ import { dbService } from "fbase";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Home = ( {userObj} ) => {
+
+const Hot = ( {userObj} ) => {
     const [PDJWs, setPDJWs] = useState([]);
     useEffect(() => {
-        dbService.collection("PDJWs").orderBy("createdAt", "desc").onSnapshot(
+        dbService
+        .collection("PDJWs")
+        .where("likeCount", ">=", 5)
+        .orderBy("likeCount", "desc")
+        .onSnapshot(
           (snapshot) => {
             const PDJWArray = snapshot.docs.map((doc) => ({
               id: doc.id,
@@ -20,7 +25,7 @@ const Home = ( {userObj} ) => {
       
     return (
         <div className="container">
-         <ul style={{marginRight :10}}>
+            <ul style={{marginRight :10}}>
                <li>
               <Link style={{
             marginLeft: -90,
@@ -47,6 +52,8 @@ const Home = ( {userObj} ) => {
             </li>  
             </ul>
            
+
+        
             <NPDJWFactory userObj={userObj} />
             <div style={{ marginTop: 30 }}>
                 {PDJWs.map((PDJW) => (
@@ -60,4 +67,4 @@ const Home = ( {userObj} ) => {
         </div>
     )
     }
-export default Home;
+export default Hot;
